@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+    <Transition
+        motion:constraintSetEnd="@layout/apple_music_fullscreen"
+        motion:constraintSetStart="@layout/apple_music_small"
+        motion:duration="200">
+        <OnSwipe
+            motion:dragDirection="dragUp"
+            motion:touchAnchorId="@id/video_overlay_touchable_area"
+            motion:touchAnchorSide="right" />
+
+        <KeyFrameSet>
+
+            <KeyPosition
+                motion:framePosition="10"
+                motion:keyPositionType="deltaRelative"
+                motion:percentX="0"
+                motion:target="@id/video_overlay_thumbnail" />
+
+            <KeyPosition
+                android:scaleX="2"
+                android:scaleY="2"
+                motion:framePosition="10"
+                motion:keyPositionType="pathRelative"
+                motion:percentX="0"
+                motion:target="@id/video_overlay_title" />
+
+            <KeyPosition
+                android:alpha="0"
+                motion:framePosition="30"
+                motion:target="@id/video_overlay_title" />
+
+            <KeyPosition
+                motion:framePosition="10"
+                motion:keyPositionType="deltaRelative"
+                motion:percentX="0"
+                motion:percentY="0.2"
+                motion:target="@id/playBtn" />
+
+            <KeyPosition
+                motion:framePosition="10"
+                motion:keyPositionType="deltaRelative"
+                motion:percentX="0"
+                motion:percentY="0.1"
+                motion:target="@id/nextBtn" />
+
+            <KeyPosition
+                motion:framePosition="50"
+                motion:keyPositionType="deltaRelative"
+                motion:percentX="0.2"
+                motion:percentY="1.5"
+                motion:target="@id/nextBtn" />
+
+            <KeyPosition
+                motion:framePosition="10"
+                motion:keyPositionType="deltaRelative"
+                motion:percentX="0"
+                motion:percentY="0.1"
+                motion:target="@id/previousBtn" />
+
+            <KeyPosition
+                motion:framePosition="50"
+                motion:keyPositionType="deltaRelative"
+                motion:percentX="0.2"
+                motion:percentY="1.5"
+                motion:target="@id/previousBtn" />
+
+        </KeyFrameSet>
+
+    </Transition>
+</MotionScene>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        app:constraintSetEnd="@id/collapsed"
+        app:constraintSetStart="@id/expanded">
+
+        <KeyFrameSet>
+            <KeyAttribute
+                app:framePosition="0"
+                app:target="@id/bottomNavigationView">
+                <CustomAttribute
+                    app:attributeName="translationY"
+                    app:customDimension="0dp" />
+            </KeyAttribute>
+
+            <KeyAttribute
+                app:framePosition="75"
+                app:target="@id/bottomNavigationView">
+                <CustomAttribute
+                    app:attributeName="translationY"
+                    app:customDimension="55dp" />
+            </KeyAttribute>
+
+            <KeyAttribute
+                app:framePosition="100"
+                app:target="@id/backgroundDim">
+                <CustomAttribute
+                    app:attributeName="BackgroundColor"
+                    app:customColorValue="@color/colorPrimaryDark" />
+            </KeyAttribute>
+
+            <KeyAttribute
+                app:framePosition="0"
+                app:target="@id/backgroundDim">
+                <CustomAttribute
+                    app:attributeName="BackgroundColor"
+                    app:customColorValue="@android:color/transparent" />
+            </KeyAttribute>
+        </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/expanded" />
+    <ConstraintSet android:id="@+id/collapsed" />
+</MotionScene>
