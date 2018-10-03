@@ -8,7 +8,7 @@ import android.view.MotionEvent
 import android.view.View
 import android.widget.ImageView
 
-class VideoOverlayView @JvmOverloads constructor(context: Context,
+class MusicOverlayView @JvmOverloads constructor(context: Context,
                                                  attrs: AttributeSet? = null,
                                                  defStyleAttr: Int = 0) : MotionLayout(context, attrs, defStyleAttr) {
     private var motionLayout: MotionLayout

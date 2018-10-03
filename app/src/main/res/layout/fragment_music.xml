@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
 
-    <com.everything4droid.applemusicanimation.VideoOverlayView
+    <com.everything4droid.applemusicanimation.MusicOverlayView
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
